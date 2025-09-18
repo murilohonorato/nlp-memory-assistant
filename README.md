@@ -1,15 +1,22 @@
-# NLP Memory Assistant - Protótipo (Windows friendly)
+# NLP Memory Assistant
 
-Protótipo de assistente conversacional com memória persistente.
+Projeto pessoal para desenvolver um **assistente conversacional com memória de longo prazo**, usando **FastAPI (backend)** e **Streamlit (frontend)**.
 
-## Como rodar (Windows - PowerShell)
-1. Clonar repo (ou criar via GitHub Web)
-2. python -m venv .venv
-3. .\.venv\Scripts\Activate.ps1
-4. pip install -r requirements.txt
-5. cd backend; uvicorn app:app --reload --port 8000
-6. em outra janela: streamlit run frontend/app.py
+## Como rodar no Windows
 
-Endpoints:
-- GET /health
-- POST /chat  { "user_id": "...", "message": "..." }
+1. Criar ambiente virtual:
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+2. Instalar dependências:
+   ```bash
+   pip install -r requirements.txt
+3. Rodar o backend:
+   ```bash
+   uvicorn backend.app:app --reload
+    #Testar no navegador: http://localhost:8000/health
+    #Deve mostrar: {"status":"ok"}.
+4. Rodar o frontend:
+    ```bash
+    streamlit run frontend/app.py
+    #Acessar no navegador: http://localhost:8501
