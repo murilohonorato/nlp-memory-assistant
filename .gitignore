@@ -1,1 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# VSCode
+.vscode/
+
+# data/models
+data/
+models/
+
+# OS
+.DS_Store
 
